@@ -1,0 +1,11 @@
+-- Configuração GIT
+git config --global user.name PedroAmaral2512
+git config --global user.email pedroenrique25pro@gmail.com
+
+--Criar o gitignore
+dotnet new gitignore
+
+-- Criar o projeto MVC
+dotnet new mvc -o Pokedex
+
+cd Pokede
