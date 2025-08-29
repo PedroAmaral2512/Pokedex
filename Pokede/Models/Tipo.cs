@@ -6,7 +6,8 @@ namespace Pokede.Models;
 
 [Table("Tipo")]
 public class Tipo
-{   [Key]
+{
+    [Key]
     public uint Id { get; set; }
 
 
@@ -17,5 +18,5 @@ public class Tipo
     [StringLength(25)]
     public string Cor { get; set; } = "#000";
 
-    
+    public ICollection<PokemonTipo> Pokemons { get; set; }
 }
