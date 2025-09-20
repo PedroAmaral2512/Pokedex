@@ -1,6 +1,6 @@
 -- Configuração GIT
-git config --global user.name PedroAmaral2512
-git config --global user.email pedroenrique25pro@gmail.com
+git config --global user.name KZonta
+git config --global user.email kaikezonta2@gmail.com
 
 --Criar o gitignore
 dotnet new gitignore
@@ -16,3 +16,17 @@ dotnet add package Pomelo.EntityFrameworkCore.MySql --version 9.0.0
 
 -- rodar projeto 
 dotnet watch run
+
+dotnet aspnet-codegenerator
+
+dotnet add package Microsoft.VisualStudio.Web.CodeGeneration.Design --version 9.0.0
+dotnet add package Microsoft.EntityFrameworkCore.Tools --version 9.0.8
+dotnet add package Microsoft.EntityFrameworkCore.SqlServer --version 9.0.8
+
+dotnet aspnet-codegenerator controller -name RegioesController --model Regiao --dataContext AppDbContext --layout "~/Views/Shared/_LayoutAdmin.cshtml" -outDir Controllers
+
+dotnet aspnet-codegenerator controller -name TiposController --model Tipo --dataContext AppDbContext --layout "~/Views/Shared/_LayoutAdmin.cshtml" -outDir Controllers
+
+dotnet aspnet-codegenerator controller -name GenerosController --model Genero --dataContext AppDbContext --layout "~/Views/Shared/_LayoutAdmin.cshtml" -outDir Controllers
+
+dotnet aspnet-codegenerator controller -name PokemonsController --model Pokemon --dataContext AppDbContext --layout "~/Views/Shared/_LayoutAdmin.cshtml" -outDir Controllers
