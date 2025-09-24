@@ -7,17 +7,20 @@ namespace Pokede.Models;
 public class Pokemon
 {
    [Key]
+   [Display(Name = "Número")]
    [DatabaseGenerated(DatabaseGeneratedOption.None)]
    public uint Numero { get; set; }
 
    [Required(ErrorMessage = "Por favor, informe a região")]
    public uint RegiaoId { get; set; }
    [ForeignKey("RegiaoId")]
+   [Display(Name = "Região")]
    public Regiao Regiao { get; set; }
 
    [Required(ErrorMessage = "Por favor, informe o genero")]
    public uint GeneroId { get; set; }
    [ForeignKey("GeneroId")]
+   [Display(Name = "Gênero")]
    public Genero Genero { get; set; }
 
    [StringLength(30)]

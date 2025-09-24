@@ -1,4 +1,7 @@
 -- Configuração GIT
+git config --global user.name PedroAmaral2512
+git config --global user.email pedroenrique25pro@gmail.com
+
 git config --global user.name KZonta
 git config --global user.email kaikezonta2@gmail.com
 
